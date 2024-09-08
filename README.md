@@ -60,36 +60,28 @@
         <h1>حساب معدل تغير الهواء</h1>
         <label for="cfm">معدل تدفق الهواء (CFM):</label>
         <input type="number" id="cfm" placeholder="أدخل معدل تدفق الهواء بالقدم المكعب في الدقيقة">
-        
-        <label for="length">طول الغرفة (قدم):</label>
+       <label for="length">طول الغرفة (قدم):</label>
         <input type="number" id="length" placeholder="أدخل طول الغرفة بالقدم">
-        
-        <label for="width">عرض الغرفة (قدم):</label>
+           <label for="width">عرض الغرفة (قدم):</label>
         <input type="number" id="width" placeholder="أدخل عرض الغرفة بالقدم">
-        
-        <label for="height">ارتفاع الغرفة (قدم):</label>
+         <label for="height">ارتفاع الغرفة (قدم):</label>
         <input type="number" id="height" placeholder="أدخل ارتفاع الغرفة بالقدم">
-        
-        <button onclick="calculateACH()">احسب معدل تغير الهواء</button>
-        
-        <div class="result" id="result"></div>
+          <button onclick="calculateACH()">احسب معدل تغير الهواء</button>
+           <div class="result" id="result"></div>
     </div>
-
-    <script>
+  <script>
         function calculateACH() {
             const cfm = document.getElementById('cfm').value;
             const length = document.getElementById('length').value;
             const width = document.getElementById('width').value;
             const height = document.getElementById('height').value;
-            
-            if (cfm && length && width && height) {
+                 if (cfm && length && width && height) {
                 const roomVolume = length * width * height;
                 const ach = (cfm * 60) / roomVolume;
                 document.getElementById('result').innerHTML = `معدل تغير الهواء: ${ach.toFixed(2)} مرات في الساعة`;
             } else {
-                document.getElementById('result').innerHTML = 'يرجى إدخال جميع القيم المطلوبة.';
-            }
-        }
-    </script>
+ة           document.getElementById('result').innerHTML = 'يرجى إدخال جميع القيم المطلوبة.';
+                 } 
+  </script>
 </body>
 </html>
